@@ -13,7 +13,7 @@ import org.jsoup.select.Elements;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+//import java.util.*;
 import redis.clients.jedis.Jedis;
 
 /**
@@ -69,6 +69,7 @@ public class JedisIndexTest {
 	@Test
 	public void testGetCounts() {
 		Map<String, Integer> map = index.getCounts("the");
+		//System.out.println(map.get(url1));
 		assertThat(map.get(url1), is(339));
 		assertThat(map.get(url2), is(264));
 	}
